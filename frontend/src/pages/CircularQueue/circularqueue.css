@@ -1,0 +1,117 @@
+.cq-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cq-ring {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cq-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 92px;
+  height: 92px;
+  margin-left: -46px;
+  margin-top: -46px;
+  background-color: white !important;
+  border: 2px solid #0b1e3a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cq-index {
+  font-size: 0.7rem;
+  color: #64748b;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+.cq-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+}
+
+.cq-arrow {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #f97316;
+}
+
+.cq-arrow.r {
+  color: #10b981;
+}
+
+.cq-empty {
+  background: #0b1e3a;
+}
+
+.cq-default {
+  background: #0f3460;
+}
+
+.cq-enqueuing {
+  background: #10b981;
+  animation: pop-in 0.4s ease;
+}
+
+.cq-dequeuing {
+  background: #ef4444;
+  animation: pop-out 0.4s ease;
+}
+
+.cq-front {
+  background: #f97316;
+}
+
+.cq-rear {
+  background: #10b981;
+}
+
+.cq-slot.is-front {
+  box-shadow: 0 0 0 3px #f97316;
+}
+
+.cq-slot.is-rear {
+  box-shadow: 0 0 0 3px #10b981;
+}
+
+.cq-stats {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.cq-full {
+  color: #ef4444;
+}
+
+@keyframes pop-in {
+  from { transform: scale(0.4); opacity: 0.3; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pop-out {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.4); opacity: 0; }
+}

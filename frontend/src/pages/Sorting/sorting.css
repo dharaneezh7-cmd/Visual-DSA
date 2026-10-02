@@ -1,0 +1,73 @@
+.sorting-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.sorting-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sorting-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sorting-hero p {
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.sorting-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sorting-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.75rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sorting-card:hover {
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.12);
+  transform: translateY(-3px);
+}
+
+.sorting-card-icon {
+  font-size: 2rem;
+}
+
+.sorting-card h2 {
+  margin: 0.75rem 0 0.5rem;
+}
+
+.sorting-card p {
+  color: #6b7280;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sorting-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #f97316;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .sorting-cards { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+  .sorting-cards { grid-template-columns: 1fr; }
+}

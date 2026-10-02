@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Env
+.env
+
+# Logs
+*.log
+uvicorn.run.pid
+
+# OS/Editor
+.DS_Store
+.idea
+.vscode/*

@@ -1,0 +1,155 @@
+.theory-panel {
+  padding: 1.5rem;
+}
+
+.theory-title {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+}
+
+.theory-content p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.theory-content ul, .theory-content ol {
+  color: #4b5563;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.theory-content li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.concept-section {
+  margin-bottom: 1.5rem;
+}
+
+.concept-section h3 {
+  font-size: 1.15rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.concept-section p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.example-section {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.example-heading {
+  color: #f97316;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.example-content {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.step-explanation {
+  margin: 1rem 0;
+}
+
+.step-explanation h4 {
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+}
+
+.step-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: #f97316;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-desc {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.step-highlight {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.complexity-card {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.complexity-card h4 {
+  color: #1e40af;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.complexity-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.complexity-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.complexity-op {
+  color: #374151;
+  font-weight: 500;
+}
+
+.complexity-val {
+  color: #1e40af;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}

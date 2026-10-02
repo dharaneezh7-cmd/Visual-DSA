@@ -1,0 +1,106 @@
+.stack-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.stack-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 0.5rem;
+}
+
+.stack-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f97316;
+}
+
+.stack-labels.empty .stack-label.size {
+  color: #9ca3af;
+}
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 180px;
+  min-height: 300px;
+  background: white !important;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 0.5rem;
+  gap: 0.4rem;
+}
+
+.stack-container.empty {
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-empty-msg {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stack-cell {
+  background: #f97316 !important;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+
+.stack-cell.is-top {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.cell-default {
+  background: #0f3460;
+}
+
+.cell-highlight {
+  background: #f97316;
+}
+
+.cell-pushing {
+  background: #10b981;
+  animation: slide-up 0.4s ease;
+  transform: scale(1.05);
+}
+
+.cell-popping {
+  background: #ef4444;
+  animation: fade-out 0.4s ease;
+}
+
+.cell-peeking {
+  background: #f59e0b;
+}
+
+.stack-base {
+  width: 220px;
+  height: 8px;
+  background: #EAE2D6;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(-30px) scale(1.05); opacity: 0.3; }
+  to { transform: translateY(0) scale(1.05); }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: scale(1.3); }
+  to { opacity: 0; transform: scale(0.5); }
+}

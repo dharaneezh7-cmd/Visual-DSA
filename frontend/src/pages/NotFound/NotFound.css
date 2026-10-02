@@ -1,0 +1,39 @@
+.notfound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.notfound-code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #f97316;
+  line-height: 1;
+}
+
+.notfound h1 {
+  margin: 1rem 0 0.5rem;
+}
+
+.notfound p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.notfound-btn {
+  padding: 0.7rem 1.5rem;
+  background: #f97316;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.notfound-btn:hover {
+  background: #ea580c;
+}

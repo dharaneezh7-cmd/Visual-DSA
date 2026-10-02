@@ -1,0 +1,74 @@
+.array-val-input {
+  min-width: 180px;
+}
+
+.array-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.array-indices,
+.array-cells,
+.array-addresses {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.array-index,
+.array-address {
+  width: 76px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  padding: 0.25rem 0;
+}
+
+.array-cells {
+  margin: 0.25rem 0;
+}
+
+.array-cell {
+  width: 76px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.25s, transform 0.25s;
+  box-shadow: 0 0 0 1px #1f4a7a;
+}
+
+.cell-default { background: white !important; }
+.cell-highlight { background: #f97316; transform: scale(1.05); }
+.cell-inserting { background: #10b981; animation: array-pop 0.3s ease; }
+.cell-deleting { background: #ef4444; animation: array-shrink 0.3s ease; }
+.cell-found { background: #10b981; transform: scale(1.1); box-shadow: 0 0 16px rgba(16, 185, 129, 0.6); }
+.cell-traversing { background: #f59e0b; }
+
+.array-empty {
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.array-address {
+  font-family: 'Courier New', monospace;
+  color: #475569;
+}
+
+@keyframes array-pop {
+  from { transform: scale(0.4); opacity: 0.3; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes array-shrink {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.3); opacity: 0; }
+}

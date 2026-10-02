@@ -1,0 +1,248 @@
+.progress-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.progress-header-row {
+  margin-bottom: 2rem;
+}
+
+.progress-title {
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+  color: #111827;
+}
+
+.progress-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.progress-guest-banner {
+  margin-top: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #92400e;
+}
+
+.guest-login-link {
+  color: #d97706;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.topic-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2rem;
+}
+
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.progress-block {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.progress-block h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar-large {
+  background: #e5e7eb;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.8s ease;
+}
+
+.progress-bar-text {
+  display: block;
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.level-beginner { background: #ecfdf5; color: #065f46; }
+.level-intermediate { background: #eff6ff; color: #1e40af; }
+.level-advanced { background: #fef2f2; color: #991b1b; }
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+}
+
+.topic-list li {
+  padding: 0.45rem 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.strong-list li { color: #047857; }
+.weak-list li { color: #b45309; }
+.recommended-list li { color: #1e40af; }
+
+.progress-empty {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.progress-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.progress-action-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #f97316;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.progress-action-btn:hover { background: #ea580c; }
+
+.progress-action-btn.outline {
+  background: transparent;
+  border: 2px solid #f97316;
+  color: #f97316;
+}
+
+.progress-action-btn.outline:hover { background: #f97316; color: #fff; }
+
+.progress-error {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.progress-error p {
+  color: #991b1b;
+  margin-bottom: 1rem;
+}
+
+.progress-err-link {
+  color: #f97316;
+  font-weight: 600;
+}
+
+/* Certificate Banner in Progress */
+.progress-certificate-card {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 2px solid #fed7aa;
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.08);
+  flex-wrap: wrap;
+}
+
+.cert-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.cert-card-badge {
+  font-size: 2.5rem;
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.15);
+  flex-shrink: 0;
+}
+
+.progress-certificate-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #9a3412;
+  margin: 0 0 0.25rem 0;
+}
+
+.progress-certificate-card p {
+  font-size: 0.92rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.cert-claim-btn {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.35);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cert-claim-btn:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.45);
+}
+
+@media (max-width: 800px) {
+  .progress-cards { grid-template-columns: 1fr 1fr; }
+  .progress-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 500px) {
+  .progress-cards { grid-template-columns: 1fr; }
+}

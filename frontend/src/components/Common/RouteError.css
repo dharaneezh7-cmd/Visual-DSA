@@ -1,0 +1,56 @@
+.route-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.route-error-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #ef4444;
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.route-error h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.route-error p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.route-error code {
+  background: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  margin: 0.25rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.route-error-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #f97316;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.route-error-btn:hover {
+  background: #ea580c;
+}
