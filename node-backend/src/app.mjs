@@ -28,10 +28,17 @@ export function createApp() {
   app.use(
     cors({
       origin(origin, callback) {
-        if (!origin || config.clientOrigins.includes(origin)) return callback(null, true);
-        return callback(new Error('Origin not allowed by CORS policy.'));
+        if (!origin) return callback(null, true);
+        const normalizedOrigin = origin.replace(/\/+$/, '');
+        const isAllowed = config.clientOrigins.some((allowed) => allowed === normalizedOrigin);
+        if (isAllowed) return callback(null, true);
+        const corsErr = new Error(`Origin ${origin} not allowed by CORS policy.`);
+        corsErr.status = 403;
+        return callback(corsErr);
       },
-      credentials: false,
+      credentials: true,
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
     })
   );
 

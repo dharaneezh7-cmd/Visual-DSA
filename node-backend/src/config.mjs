@@ -22,11 +22,14 @@ export const config = {
   pythonServiceUrl: process.env.PYTHON_SERVICE_URL || 'http://localhost:8000',
   internalApiKey: process.env.INTERNAL_API_KEY || 'default-internal-key-change-me',
   trustProxy: process.env.TRUST_PROXY === 'true',
-  clientOrigins: (process.env.CLIENT_URL || 'https://visual-dsa-five.vercel.app/')
+  clientOrigins: (
+    process.env.CLIENT_URL ||
+    'https://visual-dsa-five.vercel.app,http://localhost:5173'
+  )
     .split(',')
-    .map((origin) => origin.trim())
+    .map((origin) => origin.trim().replace(/\/+$/, ''))
     .filter(Boolean),
-  ollamaBaseUrl: process.env.OLLAMA_BASE_URL || 'http://127.0.0.1:11434',
+  ollamaBaseUrl: (process.env.OLLAMA_BASE_URL || 'https://w3fg1q6d-11434.inc1.devtunnels.ms').replace(/\/+$/, ''),
   ollamaModel: process.env.OLLAMA_MODEL || 'llama3.2:3b',
 };
 
