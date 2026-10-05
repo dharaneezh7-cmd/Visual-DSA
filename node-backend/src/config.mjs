@@ -22,7 +22,7 @@ export const config = {
   pythonServiceUrl: process.env.PYTHON_SERVICE_URL || 'http://localhost:8000',
   internalApiKey: process.env.INTERNAL_API_KEY || 'default-internal-key-change-me',
   trustProxy: process.env.TRUST_PROXY === 'true',
-  clientOrigins: (process.env.CLIENT_URL || 'http://localhost:5173')
+  clientOrigins: (process.env.CLIENT_URL || 'https://visual-dsa-five.vercel.app/')
     .split(',')
     .map((origin) => origin.trim())
     .filter(Boolean),
