@@ -28,10 +28,31 @@ export function createApp() {
   app.use(
     cors({
       origin(origin, callback) {
+        // Allow server-to-server or curl/mobile requests without origin
         if (!origin) return callback(null, true);
+
         const normalizedOrigin = origin.replace(/\/+$/, '');
-        const isAllowed = config.clientOrigins.some((allowed) => allowed === normalizedOrigin);
-        if (isAllowed) return callback(null, true);
+
+        // 1. Check exact match in configured clientOrigins
+        const isExplicitlyAllowed = config.clientOrigins.some((allowed) => allowed === normalizedOrigin);
+        if (isExplicitlyAllowed) return callback(null, true);
+
+        // 2. Automatically allow any Vercel deployment preview / production domain (e.g. *.vercel.app)
+        // and localhost during local development
+        try {
+          const parsed = new URL(normalizedOrigin);
+          const hostname = parsed.hostname;
+          if (
+            hostname.endsWith('.vercel.app') ||
+            hostname === 'localhost' ||
+            hostname === '127.0.0.1'
+          ) {
+            return callback(null, true);
+          }
+        } catch {
+          // If URL parsing fails, continue to block
+        }
+
         const corsErr = new Error(`Origin ${origin} not allowed by CORS policy.`);
         corsErr.status = 403;
         return callback(corsErr);
