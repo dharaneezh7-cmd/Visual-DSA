@@ -1,6 +1,6 @@
 import type { AuthResponse, LearningProgress, Activity, Practice, DashboardData } from '../types';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://visual-dsa-0hn5.onrender.com/api';
 
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = localStorage.getItem('token');
