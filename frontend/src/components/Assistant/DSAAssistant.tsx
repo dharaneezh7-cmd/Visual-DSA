@@ -57,7 +57,6 @@ export default function DSAAssistant() {
   const [bubbleMessage, setBubbleMessage] = useState(activeTopicInfo.greeting);
   const [emotion, setEmotion] = useState<MascotEmotion>('idle');
   const [currentAction, setCurrentAction] = useState<MascotAction>('none');
-  const [showActionBar, setShowActionBar] = useState(false);
   const [particles, setParticles] = useState<MascotParticle[]>([]);
   const [voiceEnabled, setVoiceEnabled] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -683,54 +682,6 @@ export default function DSAAssistant() {
           </div>
         )}
 
-        {/* Quick Action Toolbar directly attached to Lemmy */}
-        {showActionBar && !isOpen && (
-          <div className="mascot-action-bar">
-            <button
-              className="action-trigger-btn"
-              onClick={() => performAction('backflip')}
-              title="Acrobatic Backflip 🤸"
-            >
-              🤸
-            </button>
-            <button
-              className="action-trigger-btn"
-              onClick={() => performAction('rocket')}
-              title="Rocket Boost 🚀"
-            >
-              🚀
-            </button>
-            <button
-              className="action-trigger-btn"
-              onClick={() => performAction('munch')}
-              title="Snack on Acorns 🌰"
-            >
-              🌰
-            </button>
-            <button
-              className="action-trigger-btn"
-              onClick={() => performAction('dizzy')}
-              title="Mind Blown 🤯"
-            >
-              🤯
-            </button>
-            <button
-              className="action-trigger-btn"
-              onClick={() => performAction('sleep')}
-              title="Take a Nap 💤"
-            >
-              💤
-            </button>
-            <button
-              className="action-trigger-btn"
-              onClick={handleCheer}
-              title="Cheer Me On! 🎉"
-            >
-              🎉
-            </button>
-          </div>
-        )}
-
         {/* Speech Bubble */}
         {showSpeechBubble && !isOpen && (
           <div
@@ -789,21 +740,6 @@ export default function DSAAssistant() {
               Lemmy
             </div>
           </button>
-
-          {/* Action Menu Toggle Button */}
-          {!isOpen && (
-            <button
-              className="action-menu-toggle-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowActionBar(!showActionBar);
-                playChime('click');
-              }}
-              title="Toggle Lemmy's Special Moves"
-            >
-              ⚡ Moves
-            </button>
-          )}
         </div>
       </div>
 
