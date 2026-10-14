@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './sorting.css';
 
 const sorts = [
@@ -32,6 +33,8 @@ export default function Sorting() {
           </Link>
         ))}
       </div>
+
+      <ConceptDeepDive topic="sorting" />
     </div>
   );
 }

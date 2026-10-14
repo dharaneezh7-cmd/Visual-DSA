@@ -1,0 +1,279 @@
+.concept-deep-dive {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.cdd-header {
+  margin-bottom: 1rem;
+}
+
+.cdd-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.cdd-badge {
+  background: #f97316;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+}
+
+.cdd-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cdd-summary {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Tabs */
+.cdd-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.cdd-tab-btn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.cdd-tab-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.cdd-tab-btn.active {
+  background: #fff7ed;
+  border-color: #f97316;
+  color: #c2410c;
+  box-shadow: 0 2px 6px rgba(249, 115, 22, 0.12);
+}
+
+/* Applications Grid */
+.cdd-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.cdd-app-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.cdd-app-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cdd-app-header {
+  margin-bottom: 0.45rem;
+}
+
+.cdd-app-name {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.cdd-app-domain {
+  font-size: 0.74rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  display: block;
+}
+
+.cdd-app-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #475569;
+}
+
+/* Comparison Table */
+.cdd-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.cdd-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.cdd-comparison-table th {
+  background: #f1f5f9;
+  color: #1e293b;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 2px solid #cbd5e1;
+  white-space: nowrap;
+}
+
+.cdd-comparison-table td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.cdd-comparison-table tr:hover {
+  background: #f8fafc;
+}
+
+.cdd-comparison-table tr.row-highlight {
+  background: #fff7ed;
+}
+
+.cdd-comparison-table tr.row-highlight td {
+  border-bottom-color: #fed7aa;
+}
+
+.cdd-col-name {
+  white-space: nowrap;
+}
+
+.current-concept-pill {
+  display: inline-block;
+  margin-left: 0.4rem;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.cdd-col-time {
+  min-width: 140px;
+}
+
+.time-badge {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.time-badge.best {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.time-badge.avg {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.time-badge.worst {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.cdd-col-space code {
+  background: #f1f5f9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #0f172a;
+  font-size: 0.78rem;
+}
+
+.cdd-col-pros {
+  color: #15803d;
+}
+
+.cdd-col-cons {
+  color: #b91c1c;
+}
+
+.cdd-col-bestfor {
+  color: #475569;
+}
+
+.bestfor-text {
+  background: #f1f5f9;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Recommendation Box */
+.cdd-recommendation-box {
+  margin-top: 1rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.rec-body strong {
+  color: #166534;
+  font-size: 0.82rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.rec-body p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #15803d;
+  line-height: 1.45;
+}
+
+/* Compact mode for sidebars */
+.concept-deep-dive.compact-mode {
+  padding: 0.9rem;
+  margin-top: 1rem;
+}
+
+.concept-deep-dive.compact-mode .cdd-apps-grid {
+  grid-template-columns: 1fr;
+}

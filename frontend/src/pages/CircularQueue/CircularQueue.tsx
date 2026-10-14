@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './circularqueue.css';
 
 interface Slot {
@@ -305,6 +306,8 @@ export default function CircularQueue() {
               </ol>
             </div>
           )}
+
+          <ConceptDeepDive topic="circular-queue" />
         </>
       }
     />

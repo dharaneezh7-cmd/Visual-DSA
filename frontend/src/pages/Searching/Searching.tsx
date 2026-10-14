@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './searching.css';
 
 export default function Searching() {
@@ -31,6 +32,8 @@ export default function Searching() {
           </div>
         </Link>
       </div>
+
+      <ConceptDeepDive topic="searching" />
     </div>
   );
 }

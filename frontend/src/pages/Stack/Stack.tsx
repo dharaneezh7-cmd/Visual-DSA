@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './stack.css';
 
 type Operation = 'push' | 'pop' | 'peek' | null;
@@ -342,6 +343,8 @@ export default function Stack() {
               </ol>
             </div>
           )}
+
+          <ConceptDeepDive topic="stack" />
         </>
       }
     />

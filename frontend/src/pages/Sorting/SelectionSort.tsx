@@ -4,6 +4,7 @@ import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { VisualizationPanel } from '../../components/Visualization/VisualizationComponents';
 import SortingPlayground from '../../components/Visualization/SortingPlayground';
 import { selectionSort } from '../../components/Visualization/sortingAlgorithms';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 
 export default function SelectionSort() {
   const { isAuthenticated } = useAuth();
@@ -37,11 +38,12 @@ export default function SelectionSort() {
         </>
       }
       visualization={
-        <VisualizationPanel title="Selection Sort Visualizer">
-          <SortingPlayground
-            algorithm={selectionSort}
-            algorithmName="Selection Sort"
-            pseudocode={`function selectionSort(arr):
+        <>
+          <VisualizationPanel title="Selection Sort Visualizer">
+            <SortingPlayground
+              algorithm={selectionSort}
+              algorithmName="Selection Sort"
+              pseudocode={`function selectionSort(arr):
   n = length(arr)
   for i from 0 to n - 2:
     minIdx = i
@@ -50,17 +52,20 @@ export default function SelectionSort() {
         minIdx = j
     if minIdx != i:
       swap(arr[i], arr[minIdx])`}
-            onComplete={() => {
-              if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'SelectionSort', 'Complete', 0);
-              saveProgress('Sorting', 'Selection Sort', {
-                completed: true,
-                completionPercentage: 100,
-                timeSpent: 60,
-                operationsPerformed: 1,
-              });
-            }}
-          />
-        </VisualizationPanel>
+              onComplete={() => {
+                if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'SelectionSort', 'Complete', 0);
+                saveProgress('Sorting', 'Selection Sort', {
+                  completed: true,
+                  completionPercentage: 100,
+                  timeSpent: 60,
+                  operationsPerformed: 1,
+                });
+              }}
+            />
+          </VisualizationPanel>
+
+          <ConceptDeepDive topic="selection-sort" />
+        </>
       }
     />
   );

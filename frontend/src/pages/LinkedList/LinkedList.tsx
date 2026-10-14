@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './linkedlist.css';
 
 type Operation = 'insertBegin' | 'insertEnd' | 'insertPos' | 'deleteBegin' | 'deleteEnd' | 'deletePos' | 'search' | 'traverse' | null;
@@ -558,6 +559,8 @@ export default function LinkedList() {
               </ol>
             </div>
           )}
+
+          <ConceptDeepDive topic="linked-list" />
         </>
       }
     />

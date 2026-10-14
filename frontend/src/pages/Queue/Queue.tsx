@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './queue.css';
 
 type Operation = 'enqueue' | 'dequeue' | 'front' | 'rear' | null;
@@ -317,6 +318,8 @@ export default function Queue() {
               </ol>
             </div>
           )}
+
+          <ConceptDeepDive topic="queue" />
         </>
       }
     />

@@ -4,6 +4,7 @@ import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { VisualizationPanel } from '../../components/Visualization/VisualizationComponents';
 import SortingPlayground from '../../components/Visualization/SortingPlayground';
 import { quickSort } from '../../components/Visualization/sortingAlgorithms';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 
 export default function QuickSort() {
   const { isAuthenticated } = useAuth();
@@ -37,11 +38,12 @@ export default function QuickSort() {
         </>
       }
       visualization={
-        <VisualizationPanel title="Quick Sort Visualizer">
-          <SortingPlayground
-            algorithm={quickSort}
-            algorithmName="Quick Sort"
-            pseudocode={`function quickSort(arr, low, high):
+        <>
+          <VisualizationPanel title="Quick Sort Visualizer">
+            <SortingPlayground
+              algorithm={quickSort}
+              algorithmName="Quick Sort"
+              pseudocode={`function quickSort(arr, low, high):
   if low < high:
     pivotIndex = partition(arr, low, high)
     quickSort(arr, low, pivotIndex - 1)
@@ -56,17 +58,20 @@ function partition(arr, low, high):
       swap(arr[i], arr[j])
   swap(arr[i + 1], arr[high])
   return i + 1`}
-            onComplete={() => {
-              if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'QuickSort', 'Complete', 0);
-              saveProgress('Sorting', 'Quick Sort', {
-                completed: true,
-                completionPercentage: 100,
-                timeSpent: 60,
-                operationsPerformed: 1,
-              });
-            }}
-          />
-        </VisualizationPanel>
+              onComplete={() => {
+                if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'QuickSort', 'Complete', 0);
+                saveProgress('Sorting', 'Quick Sort', {
+                  completed: true,
+                  completionPercentage: 100,
+                  timeSpent: 60,
+                  operationsPerformed: 1,
+                });
+              }}
+            />
+          </VisualizationPanel>
+
+          <ConceptDeepDive topic="quick-sort" />
+        </>
       }
     />
   );

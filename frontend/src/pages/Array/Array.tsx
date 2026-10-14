@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './array.css';
 
 type Operation = 'create' | 'traverse' | 'insert' | 'delete' | 'update' | 'search' | null;
@@ -417,6 +418,7 @@ export default function Array() {
             </div>
           )}
 
+          <ConceptDeepDive topic="array" />
         </>
       }
       photo={

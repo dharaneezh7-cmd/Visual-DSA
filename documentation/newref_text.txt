@@ -1,0 +1,412 @@
+=== PAGE 1 ===
+ 
+ 
+ COIMBATORE INSTITUTE OF TECHNOLOGY—641014 
+MSC – SOFTWARE SYSTEMS 
+ 
+PROJECT RECORD 
+GOLD FINANCE MANAGEMENT SYSTEM 
+(Jewel Loan Management) 
+A MERN Stack Web Application 
+ 
+ 
+ 
+ 
+ 
+ 
+NAME ABIRAMI S  
+REGISTER NUMBER 2503717672622001 
+COURSE M.Sc.SS 
+SUBJECT CODE 25SS322 
+SUBJECT PYTHON PROGRAMMING LABORATORY 
+SEMESTER III 
+ACADEMIC YEAR 2026 – 2027 
+
+
+=== PAGE 2 ===
+1 
+SYNOPSIS 
+Title: Gold Finance Management System (Jewel Loan Management) 
+Background: Pawn shops and gold finance companies lend money against pledged gold 
+jewellery. In many shops the pledge details, interest calculations, customer records and receipts 
+are still kept in paper registers, which is slow, error-prone, and hard to audit. 
+Proposed System: The Gold Finance Management System is a full-stack MERN (MongoDB, 
+Express.js, React, Node.js) web application that digitises the complete jewel loan life cycle: 
+customer KYC, jewel valuation and pledge creation, automatic loan numbering and interest 
+computation, interest-only, principal and full -settlement payments, print -ready receipts with 
+QR verification, overdue tracking, reports, and audit logging. 
+Key Features: 
+• Dashboard showing disbursed loans, active pledges, overdue loans and interest 
+revenue. 
+• Loan statuses Active, Closed, Overdue and Auctioned, with customer and ornament 
+photo upload. 
+• Role-based access (Admin and Staff) secured with JWT and bcrypt password hashing. 
+• Excel (.xlsx) report export, overdue alerts, audit logs and database backup. 
+Technologies Used: React 18 with Vite and React Router (frontend); Node.js and Express.js 
+(REST API); MongoDB with Mongoose (database); JSON Web Tokens, bcryptjs, Multer, 
+ExcelJS and qrcode.react. 
+Expected Outcome: A fast, accurate, secure and paperless system that reduces calculation 
+errors, keeps a complete payment history for every pledge, and gives the owner reliable reports 
+for decision making. 
+
+=== PAGE 3 ===
+2 
+OBJECTIVE 
+The main objective of this project is to design and develop a web -based system that manages 
+gold pledge loans efficiently and replaces manual register -keeping in pawn shops and gold 
+finance businesses. The specific objectives are: 
+1. To maintain customer profiles with KYC details (Aadhaar / PAN), photographs and 
+complete pledge history. 
+2. To record pledged jewels with gross weight, net weight, stone deduction, purity (karat) 
+and market valuation. 
+3. To generate loan numbers and compute interest automatically using configurable rates 
+and tenure. 
+4. To process interest-only payments, principal deductions and full loan settlements, and 
+to issue print-ready receipts with QR verification. 
+5. To track overdue and maturing loans and notify the staff in time. 
+6. To protect data with role -based access control, JWT authentication and encrypted 
+passwords. 
+7. To produce financial reports with Excel export and to keep audit logs and backups for 
+transparency and safety. 
+SCOPE 
+The system is intended for pawn shops, jewel loan companies and gold finance businesses that 
+need a reliable digital record of their lending activity. 
+Scope of the Project 
+• Customer and KYC management with photo upload and pledge history. 
+• Gold loan creation with multi -item jewel breakdown, stone deduction, purity 
+assessment, market valuation, and loan status tracking (Active, Partially Paid, Closed) 
+with jewel custody status (Pledged / Released). 
+• Payment handling: interest -only, principal deduction and full settlement, with a 
+payment ledger per loan and printable receipts. 
+• Dashboard, reports (active loans, interest collections, overdue accounts, closed pledges) 
+and one-click Excel export. 
+• Overdue notifications, global search across loans and customers. 
+• Staff management with Admin and Staff roles, audit logs, backup and export. 
+• Configurable shop profile and business settings (interest rate, tenure, currency symbol, 
+receipt terms). 
+Limitations 
+• The system works as a web application and needs a running Node.js server and a 
+MongoDB database. 
+
+=== PAGE 4 ===
+3 
+• Gold market rates are entered by the staff; they are not fetched automatically from a 
+live rate service. 
+• Reminders are shown inside the application; SMS / e -mail / WhatsApp delivery is not 
+included. 
+• Online payment gateway integration is outside the present scope. 
+PROJECT DESCRIPTION 
+1. Overview 
+The Gold Finance Management System (Jewel Loan Management) is a MERN -stack 
+application. The React frontend communicates with an Express.js REST API, which stores data 
+in MongoDB through Mongoose. When a customer pledges jewellery, the staff register the 
+customer, enter the jewel details, and the system creates a loan with an automatically generated 
+loan number. Later payments are recorded against the loan until it is closed or, in case of 
+default, auctioned. 
+2. System Architecture 
+ 
+ 
+System architecture of the Gold Finance Management System 
+3. Modules 
+Module Description 
+Dashboard & Analytics Live overview of total disbursed loans, active pledges, overdue loans and interest revenue, with recent activities and upcoming dues. 
+Customer & KYC Customer profiles with contact details, address, ID proofs (Aadhaar / PAN) and photo; complete history of past and present pledges. 
+Loan Pledge & 
+Valuation 
+New loan creation with jewel breakdown (gross / net weight, stone 
+deduction, purity, valuation), photo upload, automatic loan number and 
+interest computation, status management. 
+Repayments & 
+Receipts 
+Interest-only payment, principal deduction and full settlement; payment 
+ledger per loan; print-ready receipt with QR code and customisable terms. 
+Reports & Export Reports for active loans, interest collections, overdue accounts and closed pledges; Excel export using ExcelJS. 
+Notifications Lists loans nearing maturity or beyond the grace period for follow-up. 
+
+
+=== PAGE 5 ===
+4 
+Module Description 
+Staff & Access Control Admin and Staff roles; JWT-based login; passwords stored with bcrypt hashing. 
+Audit Logs & Backup Activity log of sensitive operations (loan creation, updates, repayments, user actions); database backup and data export. 
+Shop & System 
+Settings 
+Shop profile (name, address, contact, registration info) and defaults for 
+interest rate, tenure, currency symbol and receipt terms. 
+4. Technology Stack 
+Layer Technologies 
+Frontend React 18 (Vite), React Router v7, Lucide icons / custom UI components, qrcode.react, CSS3 
+Backend Node.js, Express.js, cors, dotenv 
+Database MongoDB with Mongoose ODM 
+Security JSON Web Tokens (jsonwebtoken), bcryptjs 
+File Handling multer (image and document uploads), exceljs (Excel reports) 
+5. Software Requirements 
+• Node.js v16.x or higher with npm. 
+• MongoDB Community Server (local) or a MongoDB Atlas connection URI. 
+• A modern web browser (Chrome, Edge or Firefox). 
+• Code editor such as Visual Studio Code. 
+6. Working of the System 
+1. The user logs in; the server verifies the credentials and returns a JWT used for all further 
+requests. 
+2. The staff register the customer and the KYC details, or select an existing customer. 
+3. The pledged jewels, weights, purity and valuation are entered and the loan is created 
+with a unique loan number. 
+4. Payments (interest, principal or full settlement) are recorded against the loan and a 
+receipt is printed. 
+5. Loans that cross the due date are shown as overdue; reports can be viewed and exported 
+to Excel. 
+6. Every sensitive action is written to the audit log; the Admin can back up the database. 
+DATABASE DESIGN 
+The system uses MongoDB, a document database (database: gold_finance). Data is organized 
+into 7 collections validated through Mongoose ODM 8.x. Compound indexes ensure multi -
+branch isolation and rapid customer/loan retrieval. Jewel items are embedded as an array inside 
+each Loan document. 
+
+=== PAGE 6 ===
+5 
+1. staff Collection 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+staff_name String Full name of staff member (Required) 
+contact_number String Mobile number (Required) 
+role String Designation (Owner / Administrator, Loan Officer) 
+username String Unique login handle (Indexed, lowercase) 
+password String bcrypt-hashed password (10 salt rounds) 
+permission String Access level: 'Admin', 'Manager', 'Staff' 
+created_at String ISO creation timestamp 
+2. customers Collection 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+shop_id String Branch identifier ('SHOP001', 'SHOP002') 
+name String Customer name (Required) 
+relative_name String Father / Husband / Guardian name (Required) 
+mobile String Contact mobile number (Required) 
+id_proof_type String Aadhaar Card, PAN Card, Driving Licence, Voter ID 
+id_proof_number String Government ID document number (Required) 
+city String City of residence (Required) 
+address String Residential address (Required) 
+created_at String Registration timestamp (YYYY-MM-DD HH:mm:ss) 
+Index Compound Super key index on { shop_id: 1, mobile: 1 } 
+3. loans Collection 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+shop_id String Branch code ('SHOP001', 'SHOP002') 
+loan_number String Unique pledge account identifier (e.g. '999') 
+loan_date / due_date String Disbursement date and Maturity date (YYYY-MM-DD) 
+customer_id ObjectId Foreign Key -> customers._id 
+customer_name / mobile String Customer name and contact details 
+items[] Array Embedded jewel array (type, purity, weights, valuation) 
+gross_weight / 
+stone_weight Number Total ornament gross and deduction weights (g) 
+net_weight Number Net gold weight = gross_weight - stone_weight 
+estimated_value Number Appraised valuation in INR (Rs) 
+jewellery_status String Custody status: 'Pledged' or 'Released' 
+loan_amount Number Sanctioned loan principal amount (Rs) 
+interest_rate Number Monthly interest rate percentage (e.g. 1.5%, 2.0%) 
+duration_months String Enum: '3 Months', '6 Months', '12 Months' 
+status String Enum: 'Active', 'Partially Paid', 'Closed' 
+outstanding_amount Number Remaining principal balance payable 
+Index Compound Super key index on { shop_id: 1, loan_number: 1 } 
+
+=== PAGE 7 ===
+6 
+4. payments Collection 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+shop_id String Branch identifier ('SHOP001', 'SHOP002') 
+loan_id ObjectId Foreign Key -> loans._id 
+loan_number String Loan account reference number 
+payment_date String Transaction date (YYYY-MM-DD) 
+completed_months Number Whole months elapsed for interest calculation 
+remaining_days Number Remaining days elapsed for partial interest 
+total_interest_accrued Number Total accrued interest amount due 
+principal_paid / 
+interest_paid Number Payment distribution amounts 
+payment_amount Number Total amount received from borrower 
+remaining_outstanding Number Updated balance after transaction 
+loan_status_after String Status after payment: 'Active', 'Partially Paid', 'Closed' 
+payment_mode String Cash, UPI, Cheque, Bank Transfer, Card 
+recorded_by String Staff username who collected the payment 
+5. audit_logs Collection 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+timestamp String Date and time formatted as YYYY-MM-DD HH:mm:ss 
+username String Operator username (e.g. 'admin', 'test_admin') 
+action String Action: 'User Login', 'User Logout', 'Create Loan', etc. 
+record_ref String Affected loan number or reference identifier 
+details String Detailed descriptive message of the operation 
+6. shop and settings Collections (Configuration) 
+Field Name Data Type Description / Constraint 
+_id ObjectId Primary Key 
+shop_id String Unique branch code ('SHOP001', 'SHOP002') 
+shop_name / proprietor String Business enterprise and proprietor full name 
+address / phone String Shop physical address and contact phone numbers 
+default_interest_rate Number Default monthly lending interest rate (e.g. 1.5%) 
+loan_tenure_months Number Default loan tenure duration (3, 6, 12 months) 
+currency_symbol String Currency symbol displayed across the UI (Rs / INR) 
+receipt_terms String Pledge statutory terms and conditions for receipts 
+
+=== PAGE 8 ===
+7 
+DATA FLOW DIAGRAM (DFD) 
+Level 0 – Context Diagram 
+The context diagram shows the whole system as one process exchanging data with three 
+external entities. 
+ 
+ 
+Level 1 DFD 
+Level 1 splits the system into six processes: Authentication (1.0), Customer & KYC 
+Management (2.0), Loan Management (3.0), Payment & Receipt (4.0), Reports & Notifications 
+(5.0) and Administration (6.0).  
+ 
+
+
+=== PAGE 9 ===
+8 
+ER DIAGRAM 
+The entity-relationship diagram shows the collections and their relationships. One Customer 
+pledges many Loans ( 1 : N), one Loan has many Payments (1 : N), and one Staff member 
+creates many Loans, receives many Payments and performs many AuditLog entries (1 : N 
+each). Shop and Setting are standalone configuration entities. 
+ 
+ 
+
+
+=== PAGE 10 ===
+9 
+USE CASE DIAGRAM 
+Two actors use the system. The Staff / Operator handles day-to-day lending operations, and the 
+Admin / Owner inherits all staff functions and additionally manages staff, settings, audit logs 
+and backups. 
+ 
+ 
+
+
+=== PAGE 11 ===
+10 
+CLASS DIAGRAM 
+The class diagram shows the main classes with their attributes and operations. A Loan contains 
+one or more JewelItems (composition) and is linked to its Customer, Payments and the Staff 
+who created it. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PAGE 12 ===
+11 
+SEQUENCE DIAGRAM 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+Sequence diagram – User login 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sequence diagram – Create pledge loan 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sequence diagram – Payment and receipt generation 
+
+
+=== PAGE 13 ===
+12 
+SCREENSHOTS (FORMS) 
+ 
+ 
+ 
+
+
+=== PAGE 14 ===
+13 
+TEST REPORT 
+The following test cases were prepared to verify the main functions of the system. 
+TC ID Module Test Scenario Expected Result Status 
+TC01 Authentication Login with valid credentials (admin / admin123) Authentication successful, JWT stored, opens Dashboard Pass 
+TC02 Authentication Login with invalid password HTTP 401 returned; access denied with error banner Pass 
+TC03 Access Control Staff user opening Admin-only routes Access denied; unauthorized notice displayed Pass 
+TC04 Customer KYC Register customer with name, relative name, mobile, Aadhaar Customer saved in 'customers' and listed in directory Pass 
+TC05 Loan Valuation Enter Gross Weight = 18.50g and Stone Deduction = 2.50g Net weight calculated as 16.00g; valuation updated Pass 
+TC06 Loan Creation Create loan with customer, ornaments, duration, rate Loan created with unique ID, status 'Active', custody 'Pledged' Pass 
+TC07 Overdue Check Loan whose due date has passed current date Tag dynamically updated to 'Overdue' on Dashboard Pass 
+TC08 Payment Interest-only payment recorded 
+Interest added to payment 
+ledger; principal remains 
+unchanged 
+Pass 
+TC09 Payment Partial principal repayment recorded Outstanding principal reduced; status 'Partially Paid' Pass 
+TC10 Loan Closure Full settlement paid 
+Outstanding balance = 0; 
+status 'Closed'; custody 
+'Released' 
+Pass 
+TC11 Receipt Generate payment receipt 
+Printable receipt loaded 
+with shop banner and QR 
+code 
+Pass 
+TC12 Reports Filter loans by status and export to Excel Valid .xlsx file generated and downloaded via ExcelJS Pass 
+TC13 Audit Log Perform transaction and inspect audit logs Activity entry appended with username, action, and timestamp Pass 
+CONCLUSION AND FURTHER ENHANCEMENTS 
+Conclusion 
+The Gold Finance Management System (Jewel Loan Management) successfully replaces 
+cumbersome manual paper registers with an automated, robust, and paperless MERN -stack 
+architecture. By providing a centralized digital vault for customer KYC, precise ornament  
+valuation (calculating net weight from gross and stone deductions), automated interest 
+computation across calendar months with grace period logic, flexible repayment handling 
+(interest-only, partial capital reduction, and full settlement), print -ready QR-verified receipts, 
+
+=== PAGE 15 ===
+14 
+dynamic overdue notifications, role -based access control, and complete audit logging, the 
+application eliminates manual calculation discrepancies and operational friction. It provides 
+pawn shop proprietors and loan officers with transparent, real -time over sight and robust 
+regulatory compliance. 
+Further Enhancements 
+• Automated Multi-Channel Notifications: Direct integration with SMS and WhatsApp 
+Business APIs to dispatch automated due date reminders, grace period notifications, 
+and instant digital payment receipts. 
+• Live Bullion Rate Integration: Real -time bullion market API integration to 
+automatically refresh daily 22K/24K per -gram valuation ceilings and loan -to-value 
+(LTV) limits. 
+• Borrower Self-Service Portal & Mobile App: A secure customer-facing web and mobile 
+portal enabling borrowers to view active pledge ledgers, track accrued interest, and 
+verify custody status. 
+• Integrated Digital Payment Gateway: Counter and remote digital repayments powered 
+by UPI QR codes, debit cards, net banking, and automatic reconciliation. 
+• Biometric Authentication & Digital KYC: Hardware-assisted fingerprint scanning and 
+live webcam snapshot capture during borrower on -boarding for fraud -proof KYC 
+compliance. 
+Multi-Branch Enterprise Cloud Synchronization: Centralized headquarters management 
+allowing seamless multi-branch data synchronization, cross-branch pledge lookups, and 
+consolidated financial auditing. 
+

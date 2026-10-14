@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress } from '../../hooks/useProgress';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './basics.css';
 
 export default function Basics() {
@@ -196,6 +197,8 @@ export default function Basics() {
             <div className="roadmap-item"><span>07</span>Practice</div>
           </div>
         </section>
+
+        <ConceptDeepDive topic="basics" />
 
         <div className="basics-completion-card">
           <div className="basics-completion-info">

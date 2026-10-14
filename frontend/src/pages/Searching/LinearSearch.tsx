@@ -4,6 +4,7 @@ import { useProgress } from '../../hooks/useProgress';
 import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { ControlPanel, AnimationArea, StatusMessage } from '../../components/Visualization/VisualizationComponents';
 import Button from '../../components/Common/Button';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 import './searching.css';
 
 interface SearchCell {
@@ -176,6 +177,8 @@ export default function LinearSearch() {
               </ol>
             </div>
           )}
+
+          <ConceptDeepDive topic="linear-search" />
         </>
       }
     />

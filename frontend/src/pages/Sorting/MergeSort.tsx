@@ -4,6 +4,7 @@ import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { VisualizationPanel } from '../../components/Visualization/VisualizationComponents';
 import SortingPlayground from '../../components/Visualization/SortingPlayground';
 import { mergeSort } from '../../components/Visualization/sortingAlgorithms';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 
 export default function MergeSort() {
   const { isAuthenticated } = useAuth();
@@ -37,11 +38,12 @@ export default function MergeSort() {
         </>
       }
       visualization={
-        <VisualizationPanel title="Merge Sort Visualizer">
-          <SortingPlayground
-            algorithm={mergeSort}
-            algorithmName="Merge Sort"
-            pseudocode={`function mergeSort(arr, left, right):
+        <>
+          <VisualizationPanel title="Merge Sort Visualizer">
+            <SortingPlayground
+              algorithm={mergeSort}
+              algorithmName="Merge Sort"
+              pseudocode={`function mergeSort(arr, left, right):
   if left < right:
     mid = floor((left + right) / 2)
     mergeSort(arr, left, mid)
@@ -51,17 +53,20 @@ export default function MergeSort() {
 function merge(arr, left, mid, right):
   // copy to temp arrays L and R
   // merge elements in sorted order back into arr`}
-            onComplete={() => {
-              if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'MergeSort', 'Complete', 0);
-              saveProgress('Sorting', 'Merge Sort', {
-                completed: true,
-                completionPercentage: 100,
-                timeSpent: 60,
-                operationsPerformed: 1,
-              });
-            }}
-          />
-        </VisualizationPanel>
+              onComplete={() => {
+                if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'MergeSort', 'Complete', 0);
+                saveProgress('Sorting', 'Merge Sort', {
+                  completed: true,
+                  completionPercentage: 100,
+                  timeSpent: 60,
+                  operationsPerformed: 1,
+                });
+              }}
+            />
+          </VisualizationPanel>
+
+          <ConceptDeepDive topic="merge-sort" />
+        </>
       }
     />
   );

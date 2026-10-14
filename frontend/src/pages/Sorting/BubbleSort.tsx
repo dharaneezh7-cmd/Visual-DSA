@@ -4,6 +4,7 @@ import { TopicLayout } from '../../components/Layout/TopicLayout';
 import { VisualizationPanel } from '../../components/Visualization/VisualizationComponents';
 import SortingPlayground from '../../components/Visualization/SortingPlayground';
 import { bubbleSort } from '../../components/Visualization/sortingAlgorithms';
+import ConceptDeepDive from '../../components/Learning/ConceptDeepDive';
 
 export default function BubbleSort() {
   const { isAuthenticated } = useAuth();
@@ -37,11 +38,12 @@ export default function BubbleSort() {
         </>
       }
       visualization={
-        <VisualizationPanel title="Bubble Sort Visualizer">
-          <SortingPlayground
-            algorithm={bubbleSort}
-            algorithmName="Bubble Sort"
-            pseudocode={`function bubbleSort(arr):
+        <>
+          <VisualizationPanel title="Bubble Sort Visualizer">
+            <SortingPlayground
+              algorithm={bubbleSort}
+              algorithmName="Bubble Sort"
+              pseudocode={`function bubbleSort(arr):
   n = length(arr)
   for i from 0 to n - 1:
     swapped = false
@@ -51,17 +53,20 @@ export default function BubbleSort() {
         swapped = true
     if not swapped:
       break`}
-            onComplete={() => {
-              if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'BubbleSort', 'Complete', 0);
-              saveProgress('Sorting', 'Bubble Sort', {
-                completed: true,
-                completionPercentage: 100,
-                timeSpent: 60,
-                operationsPerformed: 1,
-              });
-            }}
-          />
-        </VisualizationPanel>
+              onComplete={() => {
+                if (isAuthenticated) recordActivity('Sorting', 'Visualization', 'BubbleSort', 'Complete', 0);
+                saveProgress('Sorting', 'Bubble Sort', {
+                  completed: true,
+                  completionPercentage: 100,
+                  timeSpent: 60,
+                  operationsPerformed: 1,
+                });
+              }}
+            />
+          </VisualizationPanel>
+
+          <ConceptDeepDive topic="bubble-sort" />
+        </>
       }
     />
   );
